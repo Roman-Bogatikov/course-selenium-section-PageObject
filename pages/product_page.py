@@ -23,9 +23,9 @@ class ProductPage(BasePage):
     def checking_the_name_and_price_of_the_added_product(self):
         assert self.is_element_present(*ProductPageLocators.ALERTINNER_PRODUCT_NAME), \
             "No messages about adding a product to the cart"
-        assert self.name == self.browser.find_element(*ProductPageLocators.ALERTINNER_PRODUCT_NAME).text, \
+        assert self.name == self.get_element_text(*ProductPageLocators.ALERTINNER_PRODUCT_NAME), \
             "Allert name does not match the product name"
         assert self.is_element_present(*ProductPageLocators.ALERTINNER_PRODUCT_PRICE), \
             "No messages about backet price"
-        assert self.price == self.browser.find_element(*ProductPageLocators.ALERTINNER_PRODUCT_PRICE).text, \
+        assert self.price == self.get_element_text(*ProductPageLocators.ALERTINNER_PRODUCT_PRICE), \
             "Allert price does not match the product price"
