@@ -76,7 +76,7 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     page.open()
     page.should_be_basket_link()
     page.go_to_basket_page()
-    basket_page = BasketPage(page.browser, page.url)
+    basket_page = BasketPage(page.browser, browser.current_url)
     basket_page.should_not_to_be_items_into_basket()
     basket_page.should_be_empty_basket_text()
 

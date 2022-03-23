@@ -39,9 +39,3 @@ class ProductPage(BasePage):
         assert self.is_disappeared(*ProductPageLocators.ALERTINNER_PRODUCT_NAME), \
             "Success message is not disappeared"
 
-    # def go_to_basked_check_empty(self):
-    #     self.should_be_basket_link()
-    #     self.go_to_basket_page()
-    #     basket_page = BasketPage(browser=self.browser, url=self.browser.current_url)
-    #     basket_page.should_not_to_be_items_into_basket()
-    #     basket_page.should_be_empty_basket_text()
