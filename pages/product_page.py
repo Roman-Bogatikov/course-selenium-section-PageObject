@@ -29,3 +29,11 @@ class ProductPage(BasePage):
             "No messages about backet price"
         assert self.price == self.get_element_text(*ProductPageLocators.ALERTINNER_PRODUCT_PRICE), \
             "Allert price does not match the product price"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.ALERTINNER_PRODUCT_NAME), \
+            "Success message is presented, but should not be"
+
+    def disappeared_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.ALERTINNER_PRODUCT_NAME), \
+            "Success message is not disappeared"
