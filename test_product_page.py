@@ -88,7 +88,7 @@ class TestUserAddToBasketFromProductPage:
 
     @pytest.mark.need_review
     def test_user_can_add_product_to_basket(self, browser):
-        page = ProductPage(browser, link)
+        page = ProductPage(browser, link1)
         page.open()
         page.get_product_name_and_price()
         page.add_product_to_card()
